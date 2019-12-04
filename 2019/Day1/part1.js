@@ -1,6 +1,6 @@
 const { readFileSync } = require('fs');
 
-const file  = readFileSync('./input.txt').toString();
+const file  = readFileSync('./input.txt', 'utf8');
 const input = file.split('\n');
 
 let amount = 0;

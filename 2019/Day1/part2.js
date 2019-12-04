@@ -1,6 +1,6 @@
 const { readFileSync } = require('fs');
 
-const input = readFileSync('./input.txt').toString();
+const input = readFileSync('./input.txt', 'utf8');
 const inputs = input.split('\n');
 
 function calculateFuel(value) {
@@ -13,8 +13,6 @@ function calculateFuel(value) {
 }
 
 let amount = 0;
-const now = Date.now();
-
 for (let value of inputs) {
     let fuel = calculateFuel(parseFloat(value));
     amount = amount + fuel;
